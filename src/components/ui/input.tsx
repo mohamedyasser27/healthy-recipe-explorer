@@ -17,7 +17,7 @@ function Input({ className, type, LeftIcon, RightIcon, ...props }: InputProps) {
 		<div
 			className={cn(
 				// Base styles for the container
-				"border-input shadow-xs dark:bg-input/30 flex h-9 w-full items-center gap-2 rounded-md border bg-transparent px-3 transition-[color,box-shadow]",
+				"border-input shadow-xs dark:bg-input/30 flex h-9 w-full items-center gap-2 rounded-md border bg-transparent px-3",
 
 				// Disabled state: Apply styles to the container when the input inside is disabled
 				"has-disabled:cursor-not-allowed has-disabled:opacity-50",

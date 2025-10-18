@@ -1,15 +1,15 @@
 import "./globals.css";
 
-import { Courier_Prime } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 import { Navbar } from "@/components/Navbar";
 import { SearchResultProvider } from "@/components/providers/search-result-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
-const courierPrime = Courier_Prime({
+const montserrat = Montserrat({
 	subsets: ["latin"],
-	weight: ["400", "700"],
-	variable: "--font-courier-prime",
+	weight: ["400", "500", "600", "700"],
+	variable: "--font-montserrat",
 });
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${courierPrime.variable}`}
+			className={`${montserrat.variable}`}
 			suppressHydrationWarning
 		>
 			<body className="transition-colors">

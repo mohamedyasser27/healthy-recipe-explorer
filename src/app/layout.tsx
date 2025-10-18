@@ -23,6 +23,9 @@ export default function RootLayout({
 			className={`${montserrat.variable}`}
 			suppressHydrationWarning
 		>
+			<head>
+				<meta name="apple-mobile-web-app-title" content="healthy recipe" />
+			</head>
 			<body className="transition-colors">
 				<ThemeProvider
 					disableTransitionOnChange={false}

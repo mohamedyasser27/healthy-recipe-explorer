@@ -1,9 +1,10 @@
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { searchRecipes } from "@/services/recipes";
 
 export default async function Home() {
+	const recipes = await searchRecipes("chicken");
 	return (
 		<main>
-			<ThemeToggle />
+			<pre>{JSON.stringify(recipes, null, 2)}</pre>
 		</main>
 	);
 }

@@ -3,6 +3,7 @@ import "./globals.css";
 import { Courier_Prime } from "next/font/google";
 
 import { Navbar } from "@/components/Navbar";
+import { SearchResultProvider } from "@/components/providers/search-result-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const courierPrime = Courier_Prime({
@@ -29,8 +30,10 @@ export default function RootLayout({
 					defaultTheme="system"
 					enableSystem
 				>
-					<Navbar />
-					{children}
+					<SearchResultProvider>
+						<Navbar />
+						{children}
+					</SearchResultProvider>
 				</ThemeProvider>
 			</body>
 		</html>

@@ -1,10 +1,9 @@
-import { searchRecipes } from "@/services/recipes";
+import { SearchResult } from "@/components/SearchResult";
 
 export default async function Home() {
-	const recipes = await searchRecipes("chicken");
 	return (
-		<main>
-			<pre>{JSON.stringify(recipes, null, 2)}</pre>
+		<main className="p-4">
+			<SearchResult />
 		</main>
 	);
 }

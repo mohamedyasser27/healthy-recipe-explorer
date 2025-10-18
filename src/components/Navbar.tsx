@@ -1,11 +1,10 @@
 "use client";
-import { SearchIcon } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
 import { Logo } from "@/components/Logo";
+import { SearchInput } from "@/components/SearchResult/SearchInput";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 const ThemeToggle = dynamic(
 	() => import("@/components/ThemeToggle").then((mod) => mod.ThemeToggle),
@@ -44,14 +43,7 @@ export const Navbar = () => (
 			<Link href="/">
 				<Logo className="text-primary" />
 			</Link>
-			<Input
-				type="search"
-				placeholder="Search"
-				name="search"
-				id="search"
-				LeftIcon={<SearchIcon className="size-4" />}
-				className="border-primary/30 max-w-xl rounded-full border"
-			/>
+			<SearchInput />
 			<div className="ms-auto flex items-center gap-4">
 				<ThemeToggle />
 			</div>

@@ -5,6 +5,10 @@ Built to practice clean architecture, state management, performance optimization
 
 ![App Screenshot](./screenshots/cover.png)
 
+## 🌐 Live Demo
+
+**🔗 [View Live App](https://healthy-recipe-explorer.vercel.app/)**
+
 ---
 
 ## ✨ Features

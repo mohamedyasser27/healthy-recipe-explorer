@@ -3,6 +3,7 @@ import "./globals.css";
 import { Montserrat } from "next/font/google";
 
 import { Navbar } from "@/components/Navbar";
+import { ModalProvider } from "@/components/providers/modal-provider";
 import { SearchResultProvider } from "@/components/providers/search-result-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
@@ -33,10 +34,12 @@ export default function RootLayout({
 					defaultTheme="system"
 					enableSystem
 				>
-					<SearchResultProvider>
-						<Navbar />
-						{children}
-					</SearchResultProvider>
+					<ModalProvider>
+						<SearchResultProvider>
+							<Navbar />
+							{children}
+						</SearchResultProvider>
+					</ModalProvider>
 				</ThemeProvider>
 			</body>
 		</html>
